@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="content" *ngIf="amount">
+    <h3 *ngIf="turn">Twój ruch!</h3>
+    <h3 *ngIf="!turn">Ruch komputera!</h3>
+    <p>{{amount}}</p>
+    <h6 *ngIf="turn">Ile żetonów chcesz wziąć?</h6>
+    <div class="buttons" *ngIf="turn">
+      <button md-button (click)="take(1)">1</button>
+      <button md-button (click)="take(2)">2</button>
+    </div>
+  </div>
+</div>
